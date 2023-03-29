@@ -1,0 +1,51 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="ehcache.xsd"
+         updateCheck="true"
+         monitoring="autodetect"
+         dynamicConfig="true"
+         diskPersistent="true">
+    <diskStore path="user.dir" />
+
+    <cache name="topStories"
+           maxEntriesLocalHeap="5"
+           maxEntriesLocalDisk="10"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="3000"
+           timeToLiveSeconds="60"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off"
+
+    >
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="topComments"
+           maxEntriesLocalHeap="5"
+           maxEntriesLocalDisk="10"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="3000"
+           timeToLiveSeconds="900"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off"
+
+    >
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+    <cache name="pastStories"
+           maxEntriesLocalHeap="5"
+           maxEntriesLocalDisk="10"
+           eternal="false"
+           diskSpoolBufferSizeMB="20"
+           timeToIdleSeconds="3000"
+           timeToLiveSeconds="900"
+           memoryStoreEvictionPolicy="LFU"
+           transactionalMode="off"
+
+    >
+        <persistence strategy="localTempSwap" />
+    </cache>
+
+</ehcache>
