@@ -11,6 +11,7 @@ The NewsAPI Spring Boot application provides the following features:
 
 <strong>Past stories</strong>: Displays past stories that have been posted from the endpoint of top stories.
 
+<strong>Cache Manager</strong>: To implement fast access of data rather fetching it and recalculating .
 <h2>Requirements</h2>
 The fully-fledged server uses the following:
 
